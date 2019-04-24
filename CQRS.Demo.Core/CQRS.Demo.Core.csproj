@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>36ff0588-f87b-4208-8c53-b31d457b3dec</ProjectGuid>
+    <ProjectGuid>{36FF0588-F87B-4208-8C53-B31D457B3DEC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CQRS.Demo.Core</RootNamespace>
@@ -31,24 +31,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="CQRSlite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CqrsLite.0.27.0\lib\net452\CQRSlite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Command\BaseCommand.cs" />
+    <Compile Include="Command\BaseEvent.cs" />
+    <Compile Include="Command\CreateEmployeeCommand.cs" />
+    <Compile Include="Command\CreateLocationCommand.cs" />
+    <Compile Include="Command\AssignEmployeeToLocationCommand.cs" />
+    <Compile Include="Command\RemoveEmployeeFromLocationCommand.cs" />
+    <Compile Include="Command\Events\EmployeeRemovedFromLocationEvent.cs" />
+    <Compile Include="Command\Handlers\EmployeeCommandHandler.cs" />
+    <Compile Include="Command\Events\EmployeeCreatedEvent.cs" />
+    <Compile Include="Command\Handlers\LocationCommandHandler.cs" />
+    <Compile Include="Command\Events\LocationCreatedEvent.cs" />
+    <Compile Include="Domain\Employee.cs" />
+    <Compile Include="Command\Events\EmployeeAssignedToLocationEvent.cs" />
+    <Compile Include="Domain\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Query\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
