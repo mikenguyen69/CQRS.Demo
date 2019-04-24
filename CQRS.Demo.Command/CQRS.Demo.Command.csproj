@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36FF0588-F87B-4208-8C53-B31D457B3DEC}</ProjectGuid>
+    <ProjectGuid>{E9975AEA-1668-4453-B2B5-76CEB64000EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CQRS.Demo.Core</RootNamespace>
-    <AssemblyName>CQRS.Demo.Core</AssemblyName>
+    <RootNamespace>CQRS.Demo.Command</RootNamespace>
+    <AssemblyName>CQRS.Demo.Command</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -44,25 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\BaseCommand.cs" />
-    <Compile Include="Command\BaseEvent.cs" />
-    <Compile Include="Command\CreateEmployeeCommand.cs" />
-    <Compile Include="Command\CreateLocationCommand.cs" />
-    <Compile Include="Command\AssignEmployeeToLocationCommand.cs" />
-    <Compile Include="Command\RemoveEmployeeFromLocationCommand.cs" />
-    <Compile Include="Command\Events\EmployeeRemovedFromLocationEvent.cs" />
-    <Compile Include="Command\Handlers\EmployeeCommandHandler.cs" />
-    <Compile Include="Command\Events\EmployeeCreatedEvent.cs" />
-    <Compile Include="Command\Handlers\LocationCommandHandler.cs" />
-    <Compile Include="Command\Events\LocationCreatedEvent.cs" />
-    <Compile Include="Domain\Employee.cs" />
-    <Compile Include="Command\Events\EmployeeAssignedToLocationEvent.cs" />
-    <Compile Include="Domain\Location.cs" />
+    <Compile Include="Commands\AssignEmployeeToLocationCommand.cs" />
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Events\BaseEvent.cs" />
+    <Compile Include="Commands\CreateEmployeeCommand.cs" />
+    <Compile Include="Commands\CreateLocationCommand.cs" />
+    <Compile Include="Commands\RemoveEmployeeFromLocationCommand.cs" />
+    <Compile Include="Domains\Employee.cs" />
+    <Compile Include="Domains\Location.cs" />
+    <Compile Include="Events\EmployeeAssignedToLocationEvent.cs" />
+    <Compile Include="Events\EmployeeCreatedEvent.cs" />
+    <Compile Include="Events\EmployeeRemovedFromLocationEvent.cs" />
+    <Compile Include="Events\LocationCreatedEvent.cs" />
+    <Compile Include="Handlers\EmployeeCommandHandler.cs" />
+    <Compile Include="Handlers\LocationCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

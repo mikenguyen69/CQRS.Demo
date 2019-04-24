@@ -2,7 +2,7 @@
 using CQRSlite.Domain;
 using System;
 
-namespace CQRS.Demo.Core.Domain
+namespace CQRS.Demo.Command.Domains
 {
     public class Employee : AggregateRoot
     {
