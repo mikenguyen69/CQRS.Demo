@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CQRSlite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CqrsLite.0.27.0\lib\net452\CQRSlite.dll</HintPath>
     </Reference>
@@ -80,7 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\EmployeeEventHandler.cs" />
+    <Compile Include="Handlers\EmployeeEventHandler.cs" />
     <Compile Include="Models\EmployeeRM.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Interfaces\IBaseRepository.cs" />
@@ -94,6 +97,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Demo.Core\CQRS.Demo.Core.csproj">
+      <Project>{36ff0588-f87b-4208-8c53-b31d457b3dec}</Project>
+      <Name>CQRS.Demo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
