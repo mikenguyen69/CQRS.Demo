@@ -1,5 +1,5 @@
 ﻿using CQRS.Demo.Command.Commands;
-using CQRS.Demo.Command.Domains;
+using CQRS.Demo.Core.Domain;
 using CQRSlite.Commands;
 using CQRSlite.Domain;
 using System.Threading.Tasks;

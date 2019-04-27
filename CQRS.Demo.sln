@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Demo.Command", "CQRS.Demo.Command\CQRS.Demo.Command.csproj", "{E9975AEA-1668-4453-B2B5-76CEB64000EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Demo.Query", "CQRS.Demo.Query\CQRS.Demo.Query.csproj", "{7651A5AE-1753-429C-AF28-DEEA4AB5BB08}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Demo.Core", "CQRS.Demo.Core\CQRS.Demo.Core.csproj", "{36FF0588-F87B-4208-8C53-B31D457B3DEC}"
 EndProject
 Global
@@ -11,6 +15,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9975AEA-1668-4453-B2B5-76CEB64000EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9975AEA-1668-4453-B2B5-76CEB64000EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9975AEA-1668-4453-B2B5-76CEB64000EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9975AEA-1668-4453-B2B5-76CEB64000EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7651A5AE-1753-429C-AF28-DEEA4AB5BB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7651A5AE-1753-429C-AF28-DEEA4AB5BB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7651A5AE-1753-429C-AF28-DEEA4AB5BB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7651A5AE-1753-429C-AF28-DEEA4AB5BB08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36FF0588-F87B-4208-8C53-B31D457B3DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36FF0588-F87B-4208-8C53-B31D457B3DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36FF0588-F87B-4208-8C53-B31D457B3DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU

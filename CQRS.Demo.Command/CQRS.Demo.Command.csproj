@@ -46,22 +46,21 @@
   <ItemGroup>
     <Compile Include="Commands\AssignEmployeeToLocationCommand.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
-    <Compile Include="Events\BaseEvent.cs" />
     <Compile Include="Commands\CreateEmployeeCommand.cs" />
     <Compile Include="Commands\CreateLocationCommand.cs" />
     <Compile Include="Commands\RemoveEmployeeFromLocationCommand.cs" />
-    <Compile Include="Domains\Employee.cs" />
-    <Compile Include="Domains\Location.cs" />
-    <Compile Include="Events\EmployeeAssignedToLocationEvent.cs" />
-    <Compile Include="Events\EmployeeCreatedEvent.cs" />
-    <Compile Include="Events\EmployeeRemovedFromLocationEvent.cs" />
-    <Compile Include="Events\LocationCreatedEvent.cs" />
     <Compile Include="Handlers\EmployeeCommandHandler.cs" />
     <Compile Include="Handlers\LocationCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Demo.Core\CQRS.Demo.Core.csproj">
+      <Project>{36ff0588-f87b-4208-8c53-b31d457b3dec}</Project>
+      <Name>CQRS.Demo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

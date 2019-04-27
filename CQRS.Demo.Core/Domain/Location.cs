@@ -1,5 +1,4 @@
-﻿using CQRS.Demo.Core.Command;
-using CQRS.Demo.Core.Command.Events;
+﻿using CQRS.Demo.Core.Events;
 using CQRSlite.Domain;
 using System;
 using System.Collections.Generic;

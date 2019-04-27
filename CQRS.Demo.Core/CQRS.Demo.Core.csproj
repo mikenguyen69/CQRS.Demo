@@ -44,19 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\BaseCommand.cs" />
-    <Compile Include="Command\BaseEvent.cs" />
-    <Compile Include="Command\CreateEmployeeCommand.cs" />
-    <Compile Include="Command\CreateLocationCommand.cs" />
-    <Compile Include="Command\AssignEmployeeToLocationCommand.cs" />
-    <Compile Include="Command\RemoveEmployeeFromLocationCommand.cs" />
-    <Compile Include="Command\Events\EmployeeRemovedFromLocationEvent.cs" />
-    <Compile Include="Command\Handlers\EmployeeCommandHandler.cs" />
-    <Compile Include="Command\Events\EmployeeCreatedEvent.cs" />
-    <Compile Include="Command\Handlers\LocationCommandHandler.cs" />
-    <Compile Include="Command\Events\LocationCreatedEvent.cs" />
+    <Compile Include="Events\BaseEvent.cs" />
+    <Compile Include="Events\EmployeeRemovedFromLocationEvent.cs" />
+    <Compile Include="Events\EmployeeCreatedEvent.cs" />
+    <Compile Include="Events\LocationCreatedEvent.cs" />
     <Compile Include="Domain\Employee.cs" />
-    <Compile Include="Command\Events\EmployeeAssignedToLocationEvent.cs" />
+    <Compile Include="Events\EmployeeAssignedToLocationEvent.cs" />
     <Compile Include="Domain\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
